@@ -299,7 +299,7 @@ const PageProfile = () => {
     setMessage("");
 
     try {
-      const response = await fetch("http://localhost:3000/otp/send", {
+      const response = await fetch("https://kyler-nondecasyllabic-unextravagantly.ngrok-free.dev/otp/send", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ phone: formattedPhone }),
@@ -338,7 +338,7 @@ const PageProfile = () => {
     setMessage("");
 
     try {
-      const response = await fetch("http://localhost:3000/otp/verify", {
+      const response = await fetch("https://kyler-nondecasyllabic-unextravagantly.ngrok-free.dev/otp/verify", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ phone: pendingPhone, code }),

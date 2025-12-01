@@ -1,17 +1,15 @@
 import React from "react";
-import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
+import { Route, HashRouter as Router, Routes } from "react-router-dom";
 import { AuthProvider } from "./contexts/AuthContext";
 import AdminDashboard from "./pages/AdminDashboard";
 import AdminTables from "./pages/AdminTables";
-import ConfirmEmail from "./pages/ConfirmEmail";
 import DetailKursus from "./pages/DetailKursus.jsx";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Beranda from "./pages/beranda.jsx";
 import PageKursus from "./pages/pagekursus.jsx";
 import ProfilePage from "./pages/pageprofil.jsx";
-import SignupPage from "./pages/signinpage.jsx";
-import Tentangkami from "./pages/tentangKami.jsx";
+import Tentangkami from "./pages/tentangkami.jsx";
 import AdminRoute from "./routes/AdminRoute.jsx";
 
 function App() {

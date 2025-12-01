@@ -1,4 +1,3 @@
-import React from "react";
 import { Route, HashRouter as Router, Routes } from "react-router-dom";
 import { AuthProvider } from "./contexts/AuthContext";
 import AdminDashboard from "./pages/AdminDashboard";

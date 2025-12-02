@@ -13,6 +13,28 @@ export const AuthProvider = ({ children }) => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    const handleEmailConfirmation = async () => {
+      const hashParams = new URLSearchParams(window.location.hash.substring(1));
+      const access_token = hashParams.get('access_token');
+      const refresh_token = hashParams.get('refresh_token');
+      const type = hashParams.get('type');
+
+      if (access_token && type === 'signup') {
+        const { data, error } = await supabase.auth.setSession({
+          access_token,
+          refresh_token
+        });
+        
+        if (!error && data.user) {
+          setUser(data.user);
+          await fetchProfile(data.user.id);
+          window.history.replaceState({}, document.title, window.location.pathname);
+        }
+      }
+    };
+
+    handleEmailConfirmation();
+
     supabase.auth.getSession().then(({ data: { session } }) => {
       setUser(session?.user ?? null);
       if (session?.user) {
@@ -63,6 +85,7 @@ export const AuthProvider = ({ children }) => {
           data: {
             full_name: fullName,
           },
+          emailRedirectTo: `${window.location.origin}${window.location.pathname}#/auth/callback`,
         },
       });
 

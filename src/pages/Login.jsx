@@ -89,7 +89,7 @@ const Login = () => {
     setForgotLoading(true);
     try {
       const { error } = await supabase.auth.resetPasswordForEmail(forgotEmail, {
-        redirectTo: `${window.location.origin}/login`,
+        redirectTo: `https://yoanfkransyh.github.io/E-LearningKoperasi/#/login`,
       });
       if (error) throw error;
       setForgotMessage("Link reset password telah dikirim. Silakan cek email Anda.");

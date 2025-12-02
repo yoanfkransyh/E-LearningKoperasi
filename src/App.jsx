@@ -5,6 +5,7 @@ import AdminTables from "./pages/AdminTables";
 import DetailKursus from "./pages/DetailKursus.jsx";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
+import ResetPassword from "./pages/ResetPassword";
 import Beranda from "./pages/beranda.jsx";
 import PageKursus from "./pages/pagekursus.jsx";
 import ProfilePage from "./pages/pageprofil.jsx";
@@ -22,6 +23,7 @@ function App() {
           <Route path="/tentang-kami" element={<Tentangkami />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
+          <Route path="/reset-password" element={<ResetPassword />} />
           <Route path="/profil" element={<ProfilePage />} />
           {/* Protected Admin Routes */}
           <Route

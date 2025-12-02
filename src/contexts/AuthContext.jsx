@@ -85,7 +85,7 @@ export const AuthProvider = ({ children }) => {
           data: {
             full_name: fullName,
           },
-          emailRedirectTo: `https://yoanfkransyh.github.io/E-LearningKoperasi/`,
+          emailRedirectTo: `${window.location.origin}${window.location.pathname}#/auth/callback`,
         },
       });
 

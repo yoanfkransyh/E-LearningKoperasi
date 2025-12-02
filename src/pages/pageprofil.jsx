@@ -268,10 +268,12 @@ const PageProfile = () => {
     setError("");
     setMessage("");
     try {
-      const { error } = await supabase.auth.updateUser({ email });
-      if (error) throw error;
-      // Supabase will send verification email to the new address
-      setMessage(`Link verifikasi telah dikirim ke ${email}. Silakan cek kotak masuk untuk memverifikasi.`);
+      const { error } = await supabase.auth.updateUser(
+        { email },
+        {
+          emailRedirectTo: `https://yoanfkransyh.github.io/E-LearningKoperasi/#/profil`,
+        }
+      );
     } catch (err) {
       console.error("Error updating email:", err);
       setError(err.message || "Gagal mengirim verifikasi email");

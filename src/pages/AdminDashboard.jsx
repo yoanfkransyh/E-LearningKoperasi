@@ -434,7 +434,7 @@ const AdminDashboard = () => {
         aria-hidden={!notifVisible}
         className={`fixed top-24 left-1/2 z-50 transform -translate-x-1/2 transition-all duration-300 pointer-events-none ${
           notifVisible ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-6"
-        }`}
+        }`} 
       >
         <div className="pointer-events-auto w-[360px] md:w-[520px]">
           <div className="bg-linear-to-r from-white/80 via-slate-50 to-white/80 rounded-xl shadow-2xl overflow-hidden">

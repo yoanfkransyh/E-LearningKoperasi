@@ -11,6 +11,7 @@ import PageKursus from "./pages/pagekursus.jsx";
 import ProfilePage from "./pages/pageprofil.jsx";
 import Tentangkami from "./pages/tentangkami.jsx";
 import AdminRoute from "./routes/AdminRoute.jsx";
+import Kursus2 from "./pages/kursus2.jsx";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Beranda />} />
           <Route path="/kursus" element={<PageKursus />} />
+          <Route path="/kursus2" element={<Kursus2/>} />
           <Route path="/kursus/:id" element={<DetailKursus />} />
           <Route path="/tentang-kami" element={<Tentangkami />} />
           <Route path="/login" element={<Login />} />

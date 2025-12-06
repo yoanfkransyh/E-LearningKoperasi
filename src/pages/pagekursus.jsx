@@ -185,7 +185,7 @@ const PageKursus = () => {
       {/* Main Content */}
       <main className="grow pt-8 md:pt-12 -mt-8 md:-mt-5">
         <section className="max-w-7xl mx-auto px-6 py-20">
-          <h1 className="text-2xl md:text-3xl font-bold text-center mb-8">
+          <h1 className="text-2xl md:text-3xl font-bold text-center -mt-10 mb-8">
             Jelajahi Kursusmu Sekarang
           </h1>
 
